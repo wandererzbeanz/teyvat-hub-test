@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>✦ Teyvat Hub Test ✦</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Georgia,"Times New Roman",serif;color:#eef4ff}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;
+background:radial-gradient(circle at 50% 18%,rgba(104,145,210,.25),transparent 28%),linear-gradient(145deg,#071127,#102957 48%,#050b19)}
+.stars{position:fixed;inset:0;pointer-events:none}
+.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;animation:twinkle 2.8s infinite ease-in-out}
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.4)}}
+.card{width:min(760px,90vw);padding:42px 34px;text-align:center;border:1px solid rgba(190,214,255,.5);border-radius:24px;
+background:linear-gradient(180deg,rgba(18,42,82,.86),rgba(5,15,34,.9));box-shadow:0 0 70px rgba(57,105,180,.3),inset 0 0 35px rgba(142,174,225,.06)}
+.mark{font-size:14px;letter-spacing:6px;color:#c9d9f5;margin-bottom:18px}
+h1{margin:0;font-size:clamp(38px,8vw,72px);letter-spacing:7px;font-weight:400;text-shadow:0 0 24px rgba(191,215,255,.35)}
+.line{width:180px;height:1px;background:#b8c9e8;margin:22px auto;opacity:.65}
+p{margin:0 auto 26px;max-width:570px;color:#cbd7ec;font-size:17px;line-height:1.6}
+button{cursor:pointer;border:1px solid #c5d3eb;background:rgba(30,59,105,.8);color:#fff;padding:13px 30px;border-radius:999px;
+font:inherit;transition:.25s;box-shadow:0 0 18px rgba(117,159,222,.2)}
+button:hover{transform:translateY(-2px);background:rgba(54,89,145,.9);box-shadow:0 0 28px rgba(117,159,222,.38)}
+#result{margin-top:22px;min-height:24px;color:#d9e7ff}.small{margin-top:28px;font-family:Arial,sans-serif;font-size:12px;color:#93a6c7;letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<main class="card">
+<div class="mark">✦ TEYVAT HUB ✦</div>
+<h1>TEYVAT HUB</h1><div class="line"></div>
+<p>a tiny school-network compatibility test.<br>if you can see this page, the host is reachable from your network.</p>
+<button onclick="test()">✦ TEST THE HUB ✦</button>
+<div id="result">waiting...</div>
+<div class="small">STATIC HTML • CSS • JAVASCRIPT • NO APPS SCRIPT</div>
+</main>
+<script>
+const stars=document.getElementById("stars");
+for(let i=0;i<55;i++){const s=document.createElement("i");s.className="star";s.style.left=Math.random()*100+"%";s.style.top=Math.random()*100+"%";s.style.animationDelay=Math.random()*3+"s";stars.appendChild(s)}
+function test(){document.getElementById("result").textContent="✦ it works! JavaScript is running • "+new Date().toLocaleTimeString()}
+</script>
+</body>
+</html>
